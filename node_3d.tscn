@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://blxpp05o4o0ao"]
+
+[ext_resource type="Shader" path="res://perlin.gdshader" id="1_1fuh8"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_d4232"]
+render_priority = 0
+shader = ExtResource("1_1fuh8")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_5urjw"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+material_override = SubResource("ShaderMaterial_d4232")
+instance_shader_parameters/xm = null
+instance_shader_parameters/ym = null
+instance_shader_parameters/zm = null
+mesh = SubResource("PlaneMesh_5urjw")
